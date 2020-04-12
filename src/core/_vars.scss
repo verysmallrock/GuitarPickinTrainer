@@ -1,11 +1,10 @@
 /* Vars:
    ========================================================================== */
 
-// Font
+// Core
 $mainFont                : 'Montserrat', Helvetica, Arial, sans-serif;
 
-// Size
-$mainFontColor           : #101010;
+$mainFontColor           : #dadada;
 $mainFontSize            : 18px;
 $mainFontWeight          : 400;
 $mainLineHeight          : 1.4;
@@ -23,6 +22,21 @@ $smPhoneWidth            : 320px;
 */
 
 // Main color
+
+$bg-000                  : #000000;
+$bg-100                  : #111111;
+$bg-200                  : #222222;
+$bg-300                  : #333333;
+$bg-400                  : #444444;
+$bg-500                  : #555555;
+$bg-600                  : #666666;
+$bg-700                  : #777777;
+$bg-800                  : #888888;
+$bg-900                  : #999999;
+$appBackgroundColor      : $bg-100;
+$headerColor            : $bg-400;
+
+
 $default-color           : #ffffff;
 $primary-color           : #444ce0;
 $success-color           : #26de81;

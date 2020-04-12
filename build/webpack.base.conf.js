@@ -27,13 +27,13 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    app: PATHS.src
+    app: PATHS.src,
     // module: `${PATHS.src}/your-module.js`,
   },
   output: {
     filename: `${PATHS.assets}js/[name].[contenthash].js`,
     path: PATHS.dist,
-    publicPath: "/"
+    publicPath: ""
   },
   optimization: {
     splitChunks: {
@@ -128,7 +128,9 @@ module.exports = {
   resolve: {
     alias: {
       "~": PATHS.src,
-      vue$: "vue/dist/vue.js"
+      vue$: "vue/dist/vue.js",
+      js: path.resolve(__dirname, 'src/js/'),
+      assets: path.resolve(__dirname, 'src', 'assets')
     }
   },
   plugins: [
@@ -139,6 +141,7 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
+      { from: `${PATHS.src}/${PATHS.assets}sounds`, to: `${PATHS.assets}sounds` },
       { from: `${PATHS.src}/static`, to: "" }
     ]),
 
